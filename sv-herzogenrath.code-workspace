@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "./backend",
+      "name": "Backend"
+    },
+    {
+      "path": "./frontend",
+      "name": "Frontend"
+    },
+    {
+      "path": "./db",
+      "name": "Database"   
+    },
+    {
+      "path": ".",
+      "name": "Root"
+    }
+  ],
+    "settings": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+      }
+    },
+}
