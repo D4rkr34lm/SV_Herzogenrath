@@ -1,0 +1,14 @@
+{
+  "season": "2023/2024",
+  "class": "A",
+  "members": [
+    { "num": 1, "name": "Alice Müller" },
+    { "num": 2, "name": "Bob Schmidt" },
+    { "num": 3, "name": "Carla Becker" }
+  ],
+  "leader": {
+    "name": "David König",
+    "address": "Musterstraße 12, 52062 Aachen",
+    "email": "david.koenig@example.com"
+  }
+}
