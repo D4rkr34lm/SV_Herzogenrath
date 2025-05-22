@@ -8,7 +8,13 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    PCard: typeof import('primevue/card')['default']
+    PDivider: typeof import('primevue/divider')['default']
+    PMenu: typeof import('primevue/menu')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+  }
+  export interface ComponentCustomProperties {
+    Ripple: typeof import('primevue/ripple')['default']
   }
 }
