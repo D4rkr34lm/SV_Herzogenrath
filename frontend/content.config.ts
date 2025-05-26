@@ -14,12 +14,15 @@ const teams = defineCollection({
   type: "data",
   source: "teams/*.json",
   schema: z.object({
+    type: z.string(),
+    name: z.string(),
     season: z.string(),
     class: z.string(),
     members: z.array(z.object({ num: z.number(), name: z.string() })),
     leader: z.object({
       name: z.string(),
       address: z.string(),
+      mobileNumber: z.string(),
       email: z.string(),
     }),
   }),

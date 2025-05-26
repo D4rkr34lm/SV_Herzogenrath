@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/tailwindcss",
     "@primevue/nuxt-module",
+    "nuxt-lodash",
+    "nuxt-typed-router",
   ],
 
   primevue: {

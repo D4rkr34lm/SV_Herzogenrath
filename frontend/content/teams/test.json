@@ -1,4 +1,6 @@
 {
+  "type": "seniors",
+  "name": "test",
   "season": "2023/2024",
   "class": "A",
   "members": [
@@ -9,6 +11,7 @@
   "leader": {
     "name": "David König",
     "address": "Musterstraße 12, 52062 Aachen",
-    "email": "david.koenig@example.com"
+    "email": "david.koenig@example.com",
+    "mobileNumber": "213123123123"
   }
 }

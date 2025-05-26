@@ -9,6 +9,8 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     PCard: typeof import('primevue/card')['default']
+    PColumn: typeof import('primevue/column')['default']
+    PDataTable: typeof import('primevue/datatable')['default']
     PDivider: typeof import('primevue/divider')['default']
     PMenu: typeof import('primevue/menu')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

@@ -29,11 +29,30 @@
 </template>
 <script setup lang="ts">
 import type { MenuItem } from "primevue/menuitem";
+import _ from "lodash";
 
-const navItems = ref<MenuItem[]>([
-  {
-    label: "Allgemein",
-    items: [{ label: "Neuigkeiten", route: "news" }],
-  },
-]);
+const { data: teams } = await useAsyncData(() =>
+  queryCollection("teams").all(),
+);
+
+const navItems = computed<MenuItem[]>(() => {
+  const teamLinks = _.map(teams.value ?? [], (team) => ({
+    type: team.type,
+    label: team.name,
+    route: `/teams/${team.name}`,
+  }));
+  const teamLinksGrouped = _.groupBy(teamLinks, "type");
+  const teamLinksPrepared = _.map(teamLinksGrouped, (teamGroup) => ({
+    label: teamGroup[0].type,
+    items: teamGroup,
+  }));
+
+  return [
+    {
+      label: "Allgemein",
+      items: [{ label: "Neuigkeiten", route: "/news" }],
+    },
+    ...teamLinksPrepared,
+  ];
+});
 </script>
